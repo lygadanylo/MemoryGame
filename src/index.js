@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import reducer from './reducer/reducer'
-import App from './components/App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./reducer/reducer";
+import App from "./components/App";
+import * as serviceWorker from "./serviceWorker";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 // const initialState = {
 //     inputValue: "10"
 // };
 
-const store = createStore(reducer);
+const store = createStore(reducer, composeWithDevTools());
 
 // store.subscribe(()=> console.log('New state', store.getState()));
 
@@ -35,5 +36,10 @@ const store = createStore(reducer);
 //     value
 // });
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
 serviceWorker.unregister();

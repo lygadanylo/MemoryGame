@@ -6,17 +6,17 @@ import { buttonsFunc } from "../actions/actions";
 class Level extends Component {
   constructor(props) {
     super(props);
-    this.state = { inputValueState: " " };
-    this.handelClick = this.handelClick.bind(this);
+    this.state = { inputValueState: "" };
+    //this.handelClick = this.handelClick.bind(this);
   }
-  handelClick(e) {
+  handelClick = e => {
     this.setState({ inputValueState: e.target.value });
     const inputsV = e.target.value;
     console.log("click");
     const { buttonsFunc } = this.props;
     console.log(buttonsFunc);
     buttonsFunc(inputsV);
-  }
+  };
   render() {
     return (
       <div>
@@ -44,7 +44,7 @@ const mapDispatchToProps = {
 
 Level.propTypes = {
   inputValue: PropTypes.string,
-  buttons: PropTypes.func
+  buttonsFunc: PropTypes.func
 };
 
 export default connect(

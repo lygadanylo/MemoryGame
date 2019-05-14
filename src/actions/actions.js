@@ -3,7 +3,7 @@ export const buttonsFunc = e => dispatch => {
   dispatch(actionTest(e));
 };
 
-export const actionTest = value => ({
+const actionTest = value => ({
   type: "BUTTON_VALUE",
   payload: value
 });

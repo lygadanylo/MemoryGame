@@ -7,34 +7,7 @@ import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-// const initialState = {
-//     inputValue: "10"
-// };
-
 const store = createStore(reducer, composeWithDevTools());
-
-// store.subscribe(()=> console.log('New state', store.getState()));
-
-// const value = {
-//     inputValue: 5
-// }
-
-// store.dispatch({
-//     type: 'BUTTON_VALUE',
-//     payload: value
-// });
-// store.dispatch({
-//     type: 'BUTTON_VALUE',
-//     value
-// });
-// store.dispatch({
-//     type: 'BUTTON_VALUE',
-//     value
-// });
-// store.dispatch({
-//     type: 'BUTTON_VALUE',
-//     value
-// });
 
 ReactDOM.render(
   <Provider store={store}>

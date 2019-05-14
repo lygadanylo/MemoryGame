@@ -7,9 +7,9 @@ class FieldGame extends Component {
   }
 }
 
-const mapStateToProps = inputValue => {
+const mapStateToProps = state => {
   return {
-    value2: inputValue
+    inputValue: state
   };
 };
 

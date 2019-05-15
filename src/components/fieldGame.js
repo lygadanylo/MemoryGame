@@ -3,13 +3,15 @@ import { connect } from "react-redux";
 
 class FieldGame extends Component {
   render() {
-    return <div>{console.log(this.props.inputValue)}</div>;
+    const { inputValue } = this.props;
+    return <div>{inputValue}</div>;
   }
 }
 
-const mapStateToProps = inputValue => {
+const mapStateToProps = state => {
+  const { inputValue } = state;
   return {
-    value2: inputValue
+    inputValue
   };
 };
 

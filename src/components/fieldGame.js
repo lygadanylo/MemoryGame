@@ -2,14 +2,18 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 class FieldGame extends Component {
-  qwe() {
+  reanderMatrix() {
     const { inputValue } = this.props;
     switch (inputValue) {
+      case "2":
+      return  <div>Done</div>
+      default: 
+      return <div>Empty</div>
     }
   }
   render() {
     const { inputValue } = this.props;
-    return <div>{inputValue}</div>;
+    return <div>{this.reanderMatrix()}</div>;
   }
 }
 

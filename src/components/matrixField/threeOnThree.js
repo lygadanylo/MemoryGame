@@ -5,24 +5,29 @@ class Three extends Component {
     constructor(props){
         super(props);
         this.props={};
+        this.handelButtonValue=this.handelButtonValue.bind(this);
+    }
+    handelButtonValue(){
+      var elem = Math.floor(Math.random()*(100-1)+1);
+      return(<h1>{elem}</h1>);
     }
     render(){
         return(
             <div className="button-field-wrapper">
               <div>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
               </div>
               <div>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
               </div>
               <div>
-                <button></button>
-                <button></button>
-                <button></button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
+                <button>{this.handelButtonValue()}</button>
               </div>
             </div>
            

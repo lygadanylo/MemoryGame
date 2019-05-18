@@ -9,6 +9,8 @@ class Two extends Component {
                         <div className="field">
                             <button>Value</button>
                             <button>Value</button>
+                        </div>
+                        <div>
                             <button>Value</button>
                             <button>Value</button>
                         </div>

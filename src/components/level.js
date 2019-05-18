@@ -16,11 +16,25 @@ class Level extends Component {
   };
   render() {
     return (
-      <div>
-        <button value="2" onClick={this.handelClick}>
-          2 x 2
-        </button>
-      </div>
+      <section>
+        <div className="button-wrapper">
+          <div className="buttons">
+            <button value="2" onClick={this.handelClick}>
+              2 x 2
+            </button>
+          </div>
+          <div className="buttons">
+            <button value="3" onClick={this.handelClick}>
+              3 x 3
+            </button>
+          </div>
+          <div className="buttons">
+            <button value="4" onClick={this.handelClick}>
+              4 x 4
+            </button>
+          </div>
+        </div>
+      </section>
     );
   }
 }

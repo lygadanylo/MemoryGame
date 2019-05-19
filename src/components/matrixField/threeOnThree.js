@@ -9,26 +9,26 @@ class Three extends Component {
     }
      handelButtonValue(){
       var elem = Math.floor(Math.random()*(100-1)+1);
-      return(<button value={elem}>{elem}</button>);
+      return(<button className="buttons" value={elem}>{elem}</button>);
     }
     
     render(){
         return(
             <div className="button-field-wrapper">
+              <div className="buttons-wrapper">
+                {this.handelButtonValue()}
+                {this.handelButtonValue()}
+                {this.handelButtonValue()}
+              </div>
+              <div> 
+                {this.handelButtonValue()}
+                {this.handelButtonValue()}
+                {this.handelButtonValue()}
+              </div>
               <div>
                 {this.handelButtonValue()}
-                <button>{this.handelButtonValue()}</button>
-                <button>{this.handelButtonValue()}</button>
-              </div>
-              <div>
-                <button>{this.handelButtonValue()}</button>
-                <button>{this.handelButtonValue()}</button>
-                <button>{this.handelButtonValue()}</button>
-              </div>
-              <div>
-                <button>{this.handelButtonValue()}</button>
-                <button>{this.handelButtonValue()}</button>
-                <button>{this.handelButtonValue()}</button>
+                {this.handelButtonValue()}
+                {this.handelButtonValue()}
               </div>
             </div>
            

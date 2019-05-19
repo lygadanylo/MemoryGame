@@ -7,6 +7,7 @@ import reducer from "./reducer/reducer";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 import { composeWithDevTools } from "redux-devtools-extension";
+import "./style.scss";
 
 const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 

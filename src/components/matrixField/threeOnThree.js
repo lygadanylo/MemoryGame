@@ -7,15 +7,16 @@ class Three extends Component {
         this.props={};
         this.handelButtonValue=this.handelButtonValue.bind(this);
     }
-    handelButtonValue(){
+     handelButtonValue(){
       var elem = Math.floor(Math.random()*(100-1)+1);
-      return(<h1>{elem}</h1>);
+      return(<button value={elem}>{elem}</button>);
     }
+    
     render(){
         return(
             <div className="button-field-wrapper">
               <div>
-                <button>{this.handelButtonValue()}</button>
+                {this.handelButtonValue()}
                 <button>{this.handelButtonValue()}</button>
                 <button>{this.handelButtonValue()}</button>
               </div>

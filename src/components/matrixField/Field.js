@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 import { connect } from "react-redux";
 
 class Field extends Component {
@@ -9,19 +9,16 @@ class Field extends Component {
         this.paintBlock = this.paintBlock.bind(this);
     }
      handelButtonValue(){
-      const {inputValue} = this.props;
-      let buttonList = [];
-      for(let i = 0; i<inputValue;i++){
-        var elem = Math.floor(Math.random()*(100-1)+1);
-        buttonList.push(<button className="buttons" value={elem}>{elem}</button>);
-      }
-      return(buttonList);
+
     }
     paintBlock(){
       let divList = [];
       const {inputValue} = this.props;
-      for(let i =0; i < inputValue; i++){
-        divList.push(<div>{this.handelButtonValue()}</div>);
+      var number = Math.floor(Math.random()*(100-1)+1);
+      console.log(number)
+      for(let i =0; i < inputValue * inputValue; i++){
+        var elem = Math.floor(Math.random()*(number-1)+1);
+        divList.push(<div><button className="buttons" value={elem}>{elem}</button></div>);
         console.log(divList)
       }
       return(divList)
@@ -29,9 +26,14 @@ class Field extends Component {
     
     render(){
         return(
-            <div className="button-field-wrapper">
-            {this.paintBlock()}
-            </div>
+          <Fragment>
+              <div className="button-field-wrapper">
+                {this.paintBlock()}
+              </div>
+              <div>
+                  <h1></h1>
+              </div>
+          </Fragment>
            
         );
     }

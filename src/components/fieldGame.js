@@ -1,27 +1,21 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Two from "./matrixField/twoOnTwo";
-import Foure from "./matrixField/foureOnFoure"
-import Three from "./matrixField/threeOnThree";
+import Fields from "./matrixField/Field";
 
-class FieldGame extends Component {
-  reanderMatrix() {
-    const { inputValue } = this.props;
-    switch (inputValue) {
-      case "2":
-        return  <Two />
-      case "3":
-        return  <Three />  
-      case "4":
-        return  <Foure />
-      default: 
-        return <div>Empty</div>
+class FieldGame extends Component { 
+  renderField(){
+    const {inputValue} = this.props;
+    if(inputValue){
+      return(<Fields />);
     }
-  }
-  render() {
-    return <div>{this.reanderMatrix()}{
-      console.log("filed: "+ this.props.inputValue)
-    }</div>;
+    console.log(inputValue)
+  };
+  render(){
+    return(
+      <section>
+        { this.renderField() }
+      </section>
+    );
   }
 }
 
